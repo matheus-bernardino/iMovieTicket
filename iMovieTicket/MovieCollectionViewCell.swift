@@ -13,4 +13,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var movieDescription: UILabel!
+    
+    override func prepareForReuse() {
+        poster.image = nil
+        title.text = nil
+        category.text = nil
+        movieDescription = nil
+    }
 }
